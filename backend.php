@@ -1,7 +1,10 @@
 <?php
 // Field name => Field label
 const REQUIRED_FIELDS = [
-    'forename' => 'First name',
+    'firstname' => 'First name',
+    'lastname' => 'Last name',
+    'email' => 'Email address',
+    'message' => 'Message'
 ];
 
 // only run for GET requests

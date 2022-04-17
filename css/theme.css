@@ -20,7 +20,7 @@ h1 {
     font-size: 50px;
 }
 
-.container-fluid, .description {
+.container-fluid {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,4 +54,17 @@ label {
 
 .submit {
     margin-bottom: 30px;
+}
+
+.required {
+    color: red;
+}
+
+.desc-required {
+    font-size: 16px;
+    padding: 20px 0;
+}
+
+.asterisk {
+    color: red;
 }

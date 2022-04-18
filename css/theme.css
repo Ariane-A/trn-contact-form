@@ -1,7 +1,7 @@
 @import 'fonts.css';
 
 html {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 body {
@@ -13,9 +13,58 @@ body {
 #header {
     background-color: #00a88f;
     color: #ffffff;
+    height: 120px;
 }
 
-input, textarea {
-    display: block;
-    /*width: 100%;*/
+h1 {
+    font-size: 50px;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-group, .submit {
+    padding: 20px 0;
+}
+
+label {
+    font-weight: 500;
+}
+
+.button {
+    background-color: #2332c4;
+    color: #fff;
+    border: 2px solid;
+    border-radius: 10px;
+    line-height: 1.3125;
+    min-width: 200px;
+    padding: 11px 22px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .15s,border-color .15s,color .15s;
+}
+
+.button:hover {
+    background-color: #202122;
+    color: #fff;
+}
+
+.submit {
+    margin-bottom: 30px;
+}
+
+.required {
+    color: red;
+}
+
+.desc-required {
+    font-size: 16px;
+    padding: 20px 0;
+}
+
+.asterisk {
+    color: red;
 }

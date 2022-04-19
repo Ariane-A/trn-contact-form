@@ -45,8 +45,3 @@ h1 {
 .required {
     color: red;
 }
-
-.desc-required {
-    font-size: 16px;
-    padding: 20px 0;
-}

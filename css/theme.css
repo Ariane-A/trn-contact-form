@@ -10,7 +10,7 @@ body {
     background-color: #f0f3f6;
 }
 
-#header {
+header {
     background-color: #00a88f;
     color: #ffffff;
     height: 120px;
@@ -20,17 +20,7 @@ h1 {
     font-size: 50px;
 }
 
-.container-fluid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.form-group, .submit {
-    padding: 20px 0;
-}
-
-label {
+.form-label {
     font-weight: 500;
 }
 
@@ -52,19 +42,6 @@ label {
     color: #fff;
 }
 
-.submit {
-    margin-bottom: 30px;
-}
-
 .required {
-    color: red;
-}
-
-.desc-required {
-    font-size: 16px;
-    padding: 20px 0;
-}
-
-.asterisk {
     color: red;
 }

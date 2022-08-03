@@ -40,6 +40,59 @@
     <?php unset($_SESSION['success']); ?>
 <?php endif; ?>
 
+<!--connecting to database-->
+<?php
+    $unix_socket = '/Applications/MAMP/tmp/mysql/mysql.sock';
+    $db   = 'trn-contact-form';
+    $user = 'root';
+    $pass = 'root';
+    $charset = 'utf8mb4';
+    $dsn = "mysql:unix_socket=$unix_socket;dbname=$db;charset=$charset";
+    $options = [
+        PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
+        PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+        PDO::ATTR_EMULATE_PREPARES   => false,
+    ];
+    try {
+        $pdo = new PDO($dsn, $user, $pass, $options);
+        echo 'connected to server';
+    } catch (\PDOException $e) {
+        echo 'Connection failed' . $e->getMessage();
+    }
+//
+//    // Insert one row
+//
+//        $insert = "INSERT INTO query VALUES (23, 'Thomas', 'Green', 'thomas.green@gmail.com', '07795214556', 'I urgently need someone to contact me as soon as possible')";
+//        $stmt = $pdo->prepare($insert);
+//        $stmt->execute();
+//
+//    // Insert Multiple Rows
+//
+//    $data = [
+//        [24, 'Larissa', 'Alex', 'larissa.alex@gmail.co.uk', NULL, 'Missed my train. Do I have to pay to schedule another one?'],
+//        [25, 'Paul','Swindon', 'paul.swindon@yahoo.co.uk', '02085556666', 'The app says it is no longer supported on my phone'],
+//        [26, 'Alexis', 'Adams', 'alexis.adams55@outlook.co.uk', '07412365478', "Trainline won't accept paypal?"],
+//        [27, 'Lisa', 'Platt-Smith', 'lisa.plattsmith@outlook.co.uk', NULL, 'Does trainline have a contact number? I need to speak to someone']
+//    ];
+//    $stmt = $pdo->prepare("INSERT INTO query VALUES (?, ?, ?, ?, ?, ?)");
+//    try {
+//        $pdo->beginTransaction();
+//        foreach ($data as $row)
+//        {
+//            $stmt->execute($row);
+//        }
+//        $pdo->commit();
+//    }catch (Exception $e){
+//        $pdo->rollback();
+//        throw $e;
+//    }
+//
+//    //    Update
+//
+//        $update = "UPDATE query SET email = 'james.obrien123@gmail.co.uk' WHERE firstname = 'James'";
+//        $stmt = $pdo->prepare($update);
+//        $stmt->execute();
+?>
     <header class="d-flex justify-content-center align-items-center">
         <h1>Contact Form</h1>
     </header>
